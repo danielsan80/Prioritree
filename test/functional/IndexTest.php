@@ -1,6 +1,6 @@
 <?php
 
-use Dan\CleanGame\Test\WebTestCase;
+use Dan\Prioritree\Test\WebTestCase;
 
 class IndexTest extends WebTestCase
 {
