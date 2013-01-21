@@ -1,11 +1,18 @@
 {
+    "name": "Dan/Prioritree",
+    "authors": [
+        {
+            "name": "Danilo Sanchi",
+            "email": "danilo.sanchi@gmail.com"
+        }
+    ],
     "require": {
         "silex/silex": "1.0.*"
     },
     "minimum-stability": "dev",
     "autoload": {
         "psr-0": {
-            "Dan": "src"
+            "Dan": "src/"
         }
     }
 }
