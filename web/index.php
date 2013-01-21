@@ -1,14 +1,9 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+
 require_once __DIR__.'/../vendor/autoload.php';
-
-$app = new Silex\Application();
-
-$app->get('/', function () use ($app) {
-    $file = __DIR__.'/../data/mytasks.yml';
-    $builder = new Dan\Prioritree\TaskBuilder();
-    $root = $builder->loadFromFile($file);
-    file_put_contents($file, $root->getAsYaml());	
-    return '<h1>done</h1>';
-});
+$app = require_once __DIR__.'/../app/app.php';
 
 $app->run();
