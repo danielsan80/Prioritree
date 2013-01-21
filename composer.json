@@ -7,7 +7,10 @@
         }
     ],
     "require": {
-        "silex/silex": "1.0.*"
+        "silex/silex": "1.0.*",
+        "symfony/browser-kit": ">=2.1,<2.3-dev",
+        "symfony/css-selector": ">=2.1,<2.3-dev"
+
     },
     "minimum-stability": "dev",
     "autoload": {
