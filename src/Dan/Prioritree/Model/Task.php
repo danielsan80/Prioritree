@@ -24,14 +24,14 @@ class Task extends TaskComponent{
 		if ( $i!==false ) {
 			unset($this->children[$i]);
 			$i++;
-			while($this->children[$i]) {
+			while(isset($this->children[$i]) && $this->children[$i]) {
 				$this->children[$i-1] = $this->children[$i];
 				unset($this->children[$i]);
 			}		
 		}
 	}
 	public function getChild($i) {
-		return $this->children[$i];
+		return isset($this->children[$i])?$this->children[$i]:null;
 	}
 	
 	public function countChildren(){

@@ -1,7 +1,7 @@
 <?php
 namespace Dan\Prioritree\Model;
 
-class TaskIterator implements Iterator {
+class TaskIterator implements \Iterator {
 	protected $position;
 	protected $root;
 	protected $indexes;
@@ -31,7 +31,11 @@ class TaskIterator implements Iterator {
 			} else {
 				array_shift($this->tasks);
 				array_shift($this->indexes);
-				$this->indexes[0]++;
+                                
+				if (!isset($this->indexes[0])) {
+                                    $this->indexes[0]=0;
+                                }
+                                $this->indexes[0]++;
 			}
 		}
 		$this->position++;
