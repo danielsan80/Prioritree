@@ -1,5 +1,5 @@
 {
-    "hash": "14d10768324542052a79953e478be931",
+    "hash": "cd444a9b43812ac42d72d6a940365f20",
     "packages": [
         {
             "name": "pimple/pimple",
@@ -549,6 +549,48 @@
                 }
             ],
             "description": "Symfony Routing Component",
+            "homepage": "http://symfony.com"
+        },
+        {
+            "name": "symfony/yaml",
+            "version": "2.1.x-dev",
+            "target-dir": "Symfony/Component/Yaml",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Yaml",
+                "reference": "fef0f818ba06a69da9a976592bde7b951de33a0f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/symfony/Yaml/archive/fef0f818ba06a69da9a976592bde7b951de33a0f.zip",
+                "reference": "fef0f818ba06a69da9a976592bde7b951de33a0f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "time": "2013-01-22 07:14:57",
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Yaml": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Yaml Component",
             "homepage": "http://symfony.com"
         }
     ],

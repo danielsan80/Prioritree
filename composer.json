@@ -9,7 +9,8 @@
     "require": {
         "silex/silex": "1.0.*",
         "symfony/browser-kit": ">=2.1,<2.3-dev",
-        "symfony/css-selector": ">=2.1,<2.3-dev"
+        "symfony/css-selector": ">=2.1,<2.3-dev",
+        "symfony/yaml": "2.1.*"
 
     },
     "minimum-stability": "dev",
