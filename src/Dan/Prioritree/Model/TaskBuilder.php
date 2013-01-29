@@ -27,7 +27,7 @@ class TaskBuilder {
 		if (!$record) return;
 		$data = $this->getDataAsArray($record['data']);
 		$task->setPriority($data['priority']);
-		$task->incUsedTime($data['usedTime']);
+		$task->incUsedTime(isset($data['usedTime'])?$data['usedTime']:0);
 		$this->loadChildrenFromRecord($task, isset($record['children'])?$record['children']:null);
 	}
 	
