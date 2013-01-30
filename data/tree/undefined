@@ -1,0 +1,21 @@
+Root:
+  data: usedTime=0; timeBox=100; progress=11%; time=11/100; pomodori=ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+  children:
+    Casa:
+      data: usedTime=2; priority=10; progress=17.6%; time=11/62.5; pomodori=oooooooooooooooooooooooooooooooooooooooooooooooooooo
+      children:
+        Camera da letto:
+          data: usedTime=4; priority=6; progress=29.87%; time=4.67/15.63; pomodori=ooooooooooo
+        Bagno:
+          data: usedTime=5; priority=10; progress=21.76%; time=5.67/26.04; pomodori=oooooooooooooooooooo
+        Cucina:
+          data: usedTime=0; priority=8; progress=3.2%; time=0.67/20.83; pomodori=oooooooooooooooooooo
+    Associazione:
+      data: usedTime=0; priority=6; progress=0%; time=0/37.5; pomodori=oooooooooooooooooooooooooooooooooooooo
+      children:
+        Sito:
+          data: usedTime=0; priority=2; progress=0%; time=0/4.69; pomodori=ooooo
+        Facebook:
+          data: usedTime=0; priority=4; progress=0%; time=0/9.38; pomodori=ooooooooo
+        Eventi:
+          data: usedTime=0; priority=10; progress=0%; time=0/23.44; pomodori=ooooooooooooooooooooooo

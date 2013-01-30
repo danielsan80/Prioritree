@@ -6,17 +6,27 @@ use Symfony\Component\Yaml\Yaml;
 class TaskBuilder {
 	
 	public function loadFromFile($file) {
-		$root = new TaskRoot();
 		$yaml = file_get_contents($file);
-		$record = Yaml::parse($yaml);
+                
+                return $this->loadFromString($yaml);
+	}
+        
+	public function loadFromString($str) {
+                $root = new TaskRoot();
+		$record = Yaml::parse($str);
 
 		$this->loadTaskRootFromRecord($root, $record);
+                
 		return $root;
 	}
 	
 	private function loadTaskRootFromRecord(TaskRoot $root, $record) {
 		foreach($record as $name => $record) break;
 		$data = $this->getDataAsArray($record['data']);
+                $data = array_merge(array(
+                    'timeBox' => 100,
+                    'usedTime' => 0,
+                ), $data);
 		$root->setTimebox($data['timeBox']);
 		$root->incUsedTime($data['usedTime']);
                 
@@ -26,9 +36,16 @@ class TaskBuilder {
 	private function loadTaskFromRecord(Task $task, $record) {
 		if (!$record) return;
 		$data = $this->getDataAsArray($record['data']);
+                
+                $data = array_merge(array(
+                    'priority' => 0,
+                    'usedTime' => 0,
+                ), $data);
 		$task->setPriority($data['priority']);
-		$task->incUsedTime(isset($data['usedTime'])?$data['usedTime']:0);
-		$this->loadChildrenFromRecord($task, isset($record['children'])?$record['children']:null);
+		$task->incUsedTime($data['usedTime']);
+                
+                $record['children'] = isset($record['children'])?$record['children']:null;
+		$this->loadChildrenFromRecord($task, $record['children']);
 	}
 	
 	private function loadChildrenFromRecord(Task $task, $children){

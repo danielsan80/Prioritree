@@ -1,0 +1,21 @@
+Root:
+    data: usedTime=0; timeBox=100; progress=0%; time=0/100
+    children:
+        Casa:
+            data: usedTime=0; priority=0; progress=0%; time=0/0
+            children:
+                Camera da letto:
+                    data: usedTime=0; priority=6; progress=0%; time=0/0
+                Bagno:
+                    data: usedTime=0; priority=10; progress=0%; time=0/0
+                Cucina:
+                    data: usedTime=0; priority=8; progress=0%; time=0/0
+        Associazione:
+            data: usedTime=0; priority=6; progress=0%; time=0/100
+            children:
+                Sito:
+                    data: usedTime=0; priority=2; progress=0%; time=0/12.5
+                Facebook:
+                    data: usedTime=0; priority=4; progress=0%; time=0/25
+                Eventi:
+                    data: usedTime=0; priority=10; progress=0%; time=0/62.5

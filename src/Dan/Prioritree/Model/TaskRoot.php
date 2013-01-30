@@ -39,8 +39,8 @@ class TaskRoot extends Task{
 				'usedTime='.$this->getUsedTime().'; '.
 				'timeBox='.$this->getAssignedTime().'; '.
 				'progress='.$progress.'%; '.
-				'time='.$realUsedTime.'/'.$assignedTime.'; '.
-				'pomodori='.str_pad('',round($assignedTime) - round($realUsedTime),'o')
+				'time='.$realUsedTime.'/'.$assignedTime
+                                //.'; '.'pomodori='.str_pad('',round($assignedTime) - round($realUsedTime),'o')
 		);
 		if ($children = $this->getChildrenAsArray()) $data['children'] = $children;
 		return array($this->getName() => $data);		

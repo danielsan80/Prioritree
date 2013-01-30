@@ -142,8 +142,8 @@ class Task extends TaskComponent{
 				'usedTime='.$this->getUsedTime().'; '.
 				'priority='.$this->getPriority().'; '.
 				'progress='.$progress.'%; '.
-				'time='.$realUsedTime.'/'.$assignedTime.'; '.
-				'pomodori='.str_pad('',round($assignedTime) - round($realUsedTime),'o')
+				'time='.$realUsedTime.'/'.$assignedTime
+                                //.'; '.'pomodori='.str_pad('',round($assignedTime) - round($realUsedTime),'o')
 		);
 		if ($children = $this->getChildrenAsArray()) $data['children'] = $children;
 		return $data;

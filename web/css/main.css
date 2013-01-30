@@ -3,3 +3,7 @@
     height: 100%;
     min-height: 800px;
 }
+
+#tree.error {
+    color: red;
+}
