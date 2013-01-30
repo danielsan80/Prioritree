@@ -37,18 +37,23 @@ $app->get('/tree/{id}', function ($id) use ($app) {
 
 $app->put('/tree/{id}', function ($id) use ($app) {
     $file = __DIR__.'/../data/tree/'.$id;
-    $content = $app['request']->getContent();
+    $oldContent = file_get_contents($file);
+    $newContent = $app['request']->getContent();
     $builder = new Dan\Prioritree\Model\TaskBuilder();
     try {
-        $root = $builder->loadFromString($content);
+        $newRoot = $builder->loadFromString($newContent);
     } catch (\Exception $e) {
         return new Response($e->getMessage(),400);
     }
-    $content = $root->getAsYaml();
+    $oldRoot = $builder->loadFromString($oldContent);
+    if ($oldRoot->isEqual($newRoot)) {
+        return new Response('No Changes',204);
+    }
+    $newContent = $newRoot->getAsYaml();
     
-    file_put_contents($file, $content);	
+    file_put_contents($file, $newContent);	
     
-    return new Response($content);
+    return new Response($newContent);
     
 })->bind('tree_put');
 

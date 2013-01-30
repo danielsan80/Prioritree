@@ -7,3 +7,7 @@
 #tree.error {
     color: red;
 }
+
+#tree.edit {
+    color: blue;
+}

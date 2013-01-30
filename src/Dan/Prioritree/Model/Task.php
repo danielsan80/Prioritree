@@ -5,6 +5,7 @@ class Task extends TaskComponent{
 	protected $children=array();
 	protected $usedTime = 0;
 	protected $name;
+	protected $priority;
 	
 	public function __construct($name){
 		$this->name = $name;
@@ -32,6 +33,30 @@ class Task extends TaskComponent{
 	}
 	public function getChild($i) {
 		return isset($this->children[$i])?$this->children[$i]:null;
+	}
+        
+	public function isEqual(Task $task) {
+            if ($this->getName() != $task->getName()) {
+                return false;
+            }
+            if ($this->getPriority() != $task->getPriority()) {
+                return false;
+            }
+            if ($this->getUsedTime() != $task->getUsedTime()) {
+                return false;
+            }
+            
+            if (($n = $this->countChildren()) != $task->countChildren()) {
+                return false;
+            }
+            for ($i=0; $i<$n; $i++) {
+                if (!$this->getChild($i)->isEqual($task->getChild($i))) {
+                    return false;
+                }
+            }
+            
+            
+            return true;
 	}
 	
 	public function countChildren(){

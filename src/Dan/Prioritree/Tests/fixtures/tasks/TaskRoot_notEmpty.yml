@@ -1,17 +1,17 @@
 root:
-  data: usedTime=50; timeBox=100; progress=55%; time=55/100; pomodori=ooooooooooooooooooooooooooooooooooooooooooooo
+  data: usedTime=50; timeBox=100; progress=55%; time=55/100
   children:
     child1:
-      data: usedTime=0; priority=7; progress=35.71%; time=25/70; pomodori=ooooooooooooooooooooooooooooooooooooooooooooo
+      data: usedTime=0; priority=7; progress=35.71%; time=25/70
       children:
         child11:
-          data: usedTime=0; priority=5; progress=35.71%; time=12.5/35; pomodori=oooooooooooooooooooooo
+          data: usedTime=0; priority=5; progress=35.71%; time=12.5/35
         child12:
-          data: usedTime=0; priority=5; progress=35.71%; time=12.5/35; pomodori=oooooooooooooooooooooo
+          data: usedTime=0; priority=5; progress=35.71%; time=12.5/35
     child2:
-      data: usedTime=0; priority=3; progress=100%; time=30/30; pomodori=
+      data: usedTime=0; priority=3; progress=100%; time=30/30
       children:
         child21:
-          data: usedTime=0; priority=5; progress=83.33%; time=12.5/15; pomodori=oo
+          data: usedTime=0; priority=5; progress=83.33%; time=12.5/15
         child22:
-          data: usedTime=5; priority=5; progress=116.67%; time=17.5/15; pomodori=
+          data: usedTime=5; priority=5; progress=116.67%; time=17.5/15

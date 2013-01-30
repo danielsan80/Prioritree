@@ -1,3 +1,6 @@
 nbproject
 vendor
 .DS_Store
+
+data/tree/*
+!data/tree/.gitkeep
